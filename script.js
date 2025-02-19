@@ -57,14 +57,17 @@ btnScrollTo.addEventListener('click', function (e) {
 // Page navigation
 
 document.querySelector('.nav__links').addEventListener('click', function (e) {
-  e.preventDefault();
-
-  // Matching strategy
   if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    // Nếu liên kết nội bộ (bắt đầu bằng '#') thì mới chặn hành vi mặc định
+    if (id.startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+    // Nếu không, liên kết sẽ được mở theo mặc định (ví dụ: mở tab mới nếu có target="_blank")
   }
 });
+
 
 // Tabbed component
 
