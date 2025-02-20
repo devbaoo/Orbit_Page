@@ -31,7 +31,7 @@ body {
   font-weight: 300;
   color: #444;
   line-height: 1.9;
-  background-color: #f3f3f3 !important;
+  background-color: #f3f3f3 ;
 }
 
 /* GENERAL ELEMENTS */
@@ -89,7 +89,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary) !important;
+  color: var(--color-primary) ;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -129,6 +129,8 @@ img {
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .nav__logo {
@@ -736,7 +738,13 @@ h4 {
     margin: 0.5rem 0;
   }
   .nav.sticky {
-    position: static;
+    position: relative ;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    z-index: 100;
+    transition: background-color 0.5s;
+    margin-bottom: 3rem;
   }
   .nav.logo{
     width: 100%;
@@ -797,10 +805,22 @@ h4 {
     width: 65%;
     overflow: visible;
   }
+  /* .testimonial::before {
+    font-size: 8rem;  
+    top: -2rem;       
+    left: -2rem;      
+  } */
+
   .testimonial::before {
-    font-size: 8rem;  /* giảm kích thước chữ */
-    top: -2rem;       /* điều chỉnh vị trí theo chiều dọc */
-    left: -2rem;      /* điều chỉnh vị trí theo chiều ngang */
+    content: '\201C';
+    position: absolute;
+    top: -5.7rem;
+    left: -6.8rem;
+    line-height: 1;
+    font-size: 20rem;
+    font-family: inherit;
+    color: var(--color-primary);
+    z-index: -1;
   }
   
   .testimonial__header {
@@ -841,16 +861,4 @@ h4 {
   .modal__qr-item p {
     font-size: 1.4rem;
   }
-  button {
-    -webkit-appearance: none;
-    border: none;
-    background: none;
-  }
-  
 }
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-a:link, a:visited, a:hover, a:active { color: inherit; text-decoration: none; }
-a[href^="mailto"] { color: white !important; text-decoration: none; }
