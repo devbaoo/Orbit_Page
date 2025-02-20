@@ -841,5 +841,16 @@ h4 {
   .modal__qr-item p {
     font-size: 1.4rem;
   }
+  button {
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+  }
+  
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+a:link, a:visited, a:hover, a:active { color: inherit; text-decoration: none; }
+a[href^="mailto"] { color: white !important; text-decoration: none; }
