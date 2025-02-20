@@ -696,3 +696,151 @@ h4 {
   font-size: 1.5rem;
   font-weight: 400;
 }
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    height: auto;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .header__title {
+    display: block;
+    grid-template-columns: 1fr;
+  }
+  .header__video {
+    width: 100%;
+    transform: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    height: auto;
+    padding: 1rem 2rem;
+
+  }
+  .nav__links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav__item {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .nav.sticky {
+    position: static;
+  }
+  .nav.logo{
+    width: 100%;
+    text-align: center;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+    gap: 2rem;
+  }
+  .slider {
+    max-width: 100rem;
+    height: 50rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .operations {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .operations__tab-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .operations__tab {
+    margin: 0.5rem 0;
+  }
+  .operations__content {
+    padding: 1rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .section {
+    padding: 8rem 2rem;
+
+  }
+  .section__title {
+    margin-bottom: 4rem;
+  }
+  .section__description {
+    font-size: 1.6rem;
+  }
+  .section__header {
+    font-size: 3rem;
+  }
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+  }
+  .testimonial {
+    width: 65%;
+    overflow: visible;
+  }
+  .testimonial::before {
+    font-size: 8rem;  /* giảm kích thước chữ */
+    top: -2rem;       /* điều chỉnh vị trí theo chiều dọc */
+    left: -2rem;      /* điều chỉnh vị trí theo chiều ngang */
+  }
+  
+  .testimonial__header {
+    font-size: 2rem;
+  }
+  .testimonial__text {
+    font-size: 1.5rem;
+  }
+  .testimonial__author {
+    grid-template-columns: 5rem 1fr;
+  }
+  .testimonial__photo {
+    width: 5rem;
+  }
+  .testimonial__name {
+    font-size: 1.5rem;
+  }
+  .testimonial__location {
+    font-size: 1.3rem;
+  }
+  .modal {
+    padding: 3rem 2rem;
+  }
+  .modal__header {
+    font-size: 2.5rem;
+  }
+  .modal__qr-container {
+    flex-direction: column;
+  }
+  .modal__qr-item {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .modal__qr {
+    width: 100px;
+    height: 100px;
+  }
+  .modal__qr-item p {
+    font-size: 1.4rem;
+  }
+}
+
