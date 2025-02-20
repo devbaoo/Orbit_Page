@@ -31,7 +31,7 @@ body {
   font-weight: 300;
   color: #444;
   line-height: 1.9;
-  background-color: #f3f3f3;
+  background-color: #f3f3f3 !important;
 }
 
 /* GENERAL ELEMENTS */
@@ -89,7 +89,7 @@ body {
   font-size: 1.7rem;
   font-family: inherit;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
