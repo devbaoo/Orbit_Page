@@ -214,12 +214,14 @@ h4 {
   transform: translateY(-6rem);
 }
 .header__video {
-  width: 150%;
-  grid-column: 2 / 3;
+  width: 120%;
+  grid-column: 2 / 2;
   grid-row: 1 / span 4;
-  transform: translateY(-6rem) ;
+  height: 100%;
+  margin-right: 15rem;
+  background-color: var(--color-primary-opacity);
+  border-radius: 2rem;
 }
-
 
 .highlight {
   position: relative;
